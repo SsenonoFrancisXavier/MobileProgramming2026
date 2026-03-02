@@ -1,0 +1,54 @@
+package ug.ac.ndejje.welcome
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import ug.ac.ndejje.welcome.ui.theme.NdejjeWelcomeAppTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            NdejjeWelcomeAppTheme {
+                StudentInfo()
+            }
+        }
+    }
+}
+@Composable
+fun StudentInfo() {
+    Column {
+        Text(
+            text = "Ssenono Francis Xavier",
+            style = MaterialTheme.typography.headlineSmall,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary
+        )
+        Text(
+            text = "Bachelor of Information Technology",
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.primary
+        )
+    }
+}
+
+@Preview
+@Composable
+fun NdejjePreview() {
+    NdejjeWelcomeAppTheme {
+        StudentInfo()
+    }
+}
