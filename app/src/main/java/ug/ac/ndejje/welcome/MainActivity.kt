@@ -42,6 +42,18 @@ fun StudentInfo() {
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.primary
         )
+
+        Row(){
+            Text(
+                text = "REG NO.:",
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Text(
+                text = " 24/2/314/D/307",
+                style = MaterialTheme.typography.bodyLarge
+            )
+        }
     }
 }
 
