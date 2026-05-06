@@ -1,1 +1,2 @@
-Demo ID of a ndejje university student
+ndejje university student app
+
